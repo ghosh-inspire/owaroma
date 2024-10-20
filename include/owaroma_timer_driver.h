@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2024 OW AROMA Ltd
@@ -19,3 +20,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+
+#ifndef OWAROMA_TIMER_DRIVER_H
+#define OWAROMA_TIMER_DRIVER_H
+
+// Initialize the timer hardware
+extern void owaroma_timer_init(void);
+
+// Read the current timestamp from the hardware register (in seconds)
+extern unsigned long owaroma_timer_read(void);
+
+#endif // OWAROMA_TIMER_DRIVER_H

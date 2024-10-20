@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2024 OW AROMA Ltd
@@ -19,3 +20,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+
+#ifndef OWAROMA_GPIO_DRIVER_H
+#define OWAROMA_GPIO_DRIVER_H
+
+// Initialize the gpio hardware
+extern void owaroma_gpio_init(void);
+
+// GPIO driver exported functions
+extern void owaroma_gpio_set_high(int pin);
+extern void owaroma_gpio_set_low(int pin);
+extern void owaroma_gpio_config_out(int pin);
+extern void owaroma_gpio_config_in(int pin);
+
+#endif // OWAROMA_GPIO_DRIVER_H

@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2024 OW AROMA Ltd
@@ -19,3 +20,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+
+#ifndef OWAROMA_UART_DRIVER_H
+#define OWAROMA_UART_DRIVER_H
+
+#include <stdbool.h>
+
+#define OWAROMA_PRINT_BUFFER_SIZE 100
+
+// Initialize the UART
+extern void owaroma_uart_init(void);
+
+// UART IRQ Handler
+extern void owaroma_uart_irq_handler(const char *pc8Data);
+
+// Print a string to the UART
+extern void owaroma_uart_print(const char *str);
+
+extern bool owaroma_uart_read(char *pc8Data);
+extern void owaroma_uart_write(const char *pc8Data);
+
+#endif // OWAROMA_UART_DRIVER_H

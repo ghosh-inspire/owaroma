@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2024 OW AROMA Ltd
@@ -19,3 +20,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+#ifndef OWAROMA_CONTROL_PRIVATE_H
+#define OWAROMA_CONTROL_PRIVATE_H
+
+#include <stdbool.h>
+
+#define NUM_CHANNELS	(7)
+#define PUMP_GPIO	(11)
+#define AUTO_CLOSE_DELAY (60)
+
+typedef struct {
+    unsigned int ui32GpioPin;
+    unsigned long u32StartTime;
+    bool bIsActive;
+} GpioChannel_t;
+
+#endif // OWAROMA_CONTROL_PRIVATE_H
